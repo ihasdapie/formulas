@@ -18,6 +18,7 @@ class Ncspot < Formula
   depends_on "python@3.11" => :build
   depends_on "rust" => :build
   depends_on "portaudio"
+  depends_on "dbus"
 
   uses_from_macos "ncurses"
 
