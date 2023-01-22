@@ -1,8 +1,8 @@
 class BoostPython3 < Formula
   desc "C++ library for C++/Python3 interoperability"
   homepage "https://www.boost.org/"
-  url "https://boostorg.jfrog.io/artifactory/main/release/1.81.0/source/boost_1_81_0.tar.bz2"
-  sha256 "71feeed900fbccca04a3b4f2f84a7c217186f28a940ed8b7ed4725986baf99fa"
+  url "https://boostorg.jfrog.io/artifactory/main/release/1.80.0/source/boost_1_80_0.tar.bz2"
+  sha256 "1e19565d82e43bc59209a168f5ac899d3ba471d55c7610c677d4ccf2c9c500c0"
   license "BSL-1.0"
   head "https://github.com/boostorg/boost.git", branch: "master"
 
@@ -11,21 +11,21 @@ class BoostPython3 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_ventura:  "1898b5b144d8601769c33067adfaca9de7b06a01afad5d1610d525ae9ed7744c"
-    sha256 cellar: :any,                 arm64_monterey: "bc037802ffa479a8c8ffd6e771c1c05e73e50995473b3307e07b4291755bfb71"
-    sha256 cellar: :any,                 arm64_big_sur:  "86caa3439cb90a2b72a5d32b7e8489d62581f0051f2f713acd21d540f8fa6be9"
-    sha256 cellar: :any,                 ventura:        "da0e18c720706cd1398c9aa43bcec0fda463984c01241f3ff970888285b6572d"
-    sha256 cellar: :any,                 monterey:       "84c9f7d1327f4eb84512e4987c9829b363631c1a18eda153cd48fbde96c053e0"
-    sha256 cellar: :any,                 big_sur:        "b7a356d9961abfe44e3ddb7bccb99572ef3ee43610fa99b3fa89016825d2478a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "55f12f8c41cc8b0b463d8f5283097ff193e0effbf03f9531a703c1ff0690094f"
+    sha256 cellar: :any,                 arm64_ventura:  "0231c0e5400b62e9d30e0ac3957bdf8e0aed9f551a7c061df8e9cd32543bf6e5"
+    sha256 cellar: :any,                 arm64_monterey: "81151a4fe10906c62e9bc6fdbdae760173c651e24fb4db481bdc434fee06e474"
+    sha256 cellar: :any,                 arm64_big_sur:  "86daf3cde3883aa28b5f8bcde21da9e49514bdb92d815a698e82524c20940aad"
+    sha256 cellar: :any,                 monterey:       "2b1e159f4dab39b3bcb1f9610f3fa2cab5dad81d207cec4f4a378c39e5110fa9"
+    sha256 cellar: :any,                 big_sur:        "069bcb621f209ef4a81fa1b7e4579f2de5d57281b8e24ec8a070a165c0b14c68"
+    sha256 cellar: :any,                 catalina:       "c497158ff9d4e5deda35a17d345593800f69d0a7d91e7eb6e2af4b8254f982be"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "30f47378e8e531be27b74fcb215d3b8ab348e992741cae3eed69b26c8106b770"
   end
 
   depends_on "numpy" => :build
   depends_on "boost"
-  depends_on "python@3.11"
+  depends_on "python@3.10"
 
   def python3
-    "python3.11"
+    "python3.10"
   end
 
   def install
