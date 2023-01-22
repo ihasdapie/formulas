@@ -22,12 +22,11 @@ class Jsoncpp < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "e00ec8c187ad0787b392125e31b23d0c2b0dcbb4e9f66cfd34570ca813146ab9"
   end
 
-  depends_on "meson" => :build
-  depends_on "ninja" => :build
+  depends_on "cmake" => :build
 
   def install
     mkdir "build" do
-      system "cmake", "-DJSONCPP_WITH_CMAKE_PACKAGE=ON", ".."
+      system "cmake", *std_cmake_args, "-DJSONCPP_WITH_CMAKE_PACKAGE=ON", ".."
       system "make"
       system "make", "install"
     end
