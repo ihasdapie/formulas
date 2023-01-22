@@ -27,7 +27,6 @@ class Jsoncpp < Formula
   def install
     mkdir "build" do
       system "cmake", *std_cmake_args, "-DJSONCPP_WITH_CMAKE_PACKAGE=ON", ".."
-      system "make"
       system "make", "install"
     end
   end
